@@ -9,75 +9,144 @@ import shutil
 import os
 
 selects = [
-    ('''找出所有购入商品为两种或两种以上的name的订单记录
+    ('''在OrderItems表找出所有prod_id为4种或以上的prod_id记录
 
 预期结果：
 
-+----+------+---------+--------+
-| id | name | product | number |
-+----+------+---------+--------+
-|  1 | A    | pen     | 2      |
-|  2 | B    | hat     | 4      |
-|  3 | C    | car     | 1      |
-|  4 | A    | book    | 2      |
-|  5 | B    | pen     | 5      |
-|  6 | A    | pen     | 5      |
-|  8 | C    | pencil  | 1      |
-|  9 | A    | book    | 2      |
-| 10 | B    | pen     | 2      |
-+----+------+---------+--------+
-
++-----------+------------+---------+----------+------------+
+| order_num | order_item | prod_id | quantity | item_price |
++-----------+------------+---------+----------+------------+
+|     20005 |          2 | BR03    |      100 |      10.99 |
+|     20006 |          3 | BR03    |       10 |      11.99 |
+|     20007 |          1 | BR03    |       50 |      11.49 |
+|     20008 |          2 | BR03    |        5 |      11.99 |
++-----------+------------+---------+----------+------------+
 ''', 
-'''select * from orders where name in (select name from orders group by name having count(*) >= 2);'''),
+'''
+select * from OrderItems where prod_id in (select prod_id from OrderItems group by prod_id having count(*) >= 4);
+'''),
          
-    ('''找出购买数number都大于3的name的订单
+    ('''选择OrderItems表中产品价格(prod_price)r都大于等于9的供应商(vend_id)的订单
 预期结果
-+----+------+---------+--------+
-| id | name | product | number |
-+----+------+---------+--------+
-|  7 | E    | apple   | 4      |
-+----+------+---------+--------+
++---------+---------+------------+------------+--------------------------------------------------+
+| prod_id | vend_id | prod_name  | prod_price | prod_desc                                        |
++---------+---------+------------+------------+--------------------------------------------------+
+| RYL01   | FNG01   | King doll  |       9.49 | 12 inch king doll with royal garments and crown  |
+| RYL02   | FNG01   | Queen doll |       9.49 | 12 inch queen doll with royal garments and crown |
++---------+---------+------------+------------+--------------------------------------------------+
+
 
     
 ''', 
 
-'''select * from orders where name not in (select distinct name from orders where number < 3);
+'''
+select * from Products where vend_id not in (select distinct vend_id from Products where prod_price < 9);
 或者：
-select * from orders where name in (select name from orders group by name having min(number) >=3);'''),
+select * from Products where vend_id in (select vend_id from Products group by vend_id having min(prod_price) >=9);
+'''),
     
-    ('''找出平均每单number大于3的产品名称：
+
+     
+    ('''选择OrderItems表中产品名prod_id为C-Z开头的行(注意prod_id还有一些是_或中文等开头的)。：
      
 预期结果
-+---------+
-| product |
-+---------+
-| pen     |
-| hat     |
-| apple   |
-+---------+
++-----------+------------+---------+----------+------------+
+| order_num | order_item | prod_id | quantity | item_price |
++-----------+------------+---------+----------+------------+
+|     20007 |          5 | RGAN01  |       50 |       4.49 |
+|     20008 |          1 | RGAN01  |        5 |       4.99 |
++-----------+------------+---------+----------+------------+
 
 ''',  
-'''select product from orders group by product having avg(number) > 3;'''),
+'''
+SELECT * FROM OrderItems WHERE prod_id REGEXP '^[c-z]';
+'''),     
      
-    ('''选择产品名product为c-z开头的行(注意产品名还有一些是_或中文等开头的)。：
+    ('''基于Products表，列出具有两个以上价格（prod_price）大于等于4产品的供应商(vend_id)及产品数:。
      
 预期结果
-+----+------+---------+--------+
-| id | name | product | number |
-+----+------+---------+--------+
-|  1 | A    | pen     | 2      |
-|  2 | B    | hat     | 4      |
-|  3 | C    | car     | 1      |
-|  5 | B    | pen     | 5      |
-|  6 | A    | pen     | 5      |
-|  8 | C    | pencil  | 1      |
-| 10 | B    | pen     | 2      |
-+----+------+---------+--------+
++---------+-----------+
+| vend_id | num_prods |
++---------+-----------+
+| BRS01   |         3 |
+| FNG01   |         2 |
++---------+-----------+
 
 
 ''',  
-'''SELECT * FROM orders WHERE product REGEXP '^[c-z]';'''),     
+'''
+SELECT vend_id, COUNT(*) AS num_prods
+FROM Products
+WHERE prod_price >= 4
+GROUP BY vend_id
+HAVING COUNT(*) >= 2;
+'''),       
          
+    ('''基于表OrderItems, Products, Vendors：显示order_num为20007的物品的prod_name, vend_name, prod_price, quantity
+预期结果
++---------------------+-----------------+------------+----------+
+| prod_name           | vend_name       | prod_price | quantity |
++---------------------+-----------------+------------+----------+
+| 18 inch teddy bear  | Bears R Us      |      11.99 |       50 |
+| Fish bean bag toy   | Doll House Inc. |       3.49 |      100 |
+| Bird bean bag toy   | Doll House Inc. |       3.49 |      100 |
+| Rabbit bean bag toy | Doll House Inc. |       3.49 |      100 |
+| Raggedy Ann         | Doll House Inc. |       4.99 |       50 |
++---------------------+-----------------+------------+----------+
+
+
+''',  
+'''
+SELECT prod_name, vend_name, prod_price, quantity
+FROM OrderItems, Products, Vendors
+WHERE Products.vend_id = Vendors.vend_id
+ AND OrderItems.prod_id = Products.prod_id
+ AND order_num = 20007;
+'''),     
+     
+    ('''假设Customers表中没有重复的姓名，给定一个姓名，比如'Jim Jones'，请找出'Jim Jones'所在公司的所有雇员。
+预期结果
++------------+-----------+--------------------+
+| cust_id    | cust_name | cust_contact       |
++------------+-----------+--------------------+
+| 1000000003 | Fun4All   | Jim Jones          |
+| 1000000004 | Fun4All   | Denise L. Stephens |
++------------+-----------+--------------------+
+''',  
+'''
+SELECT c1.cust_id, c1.cust_name, c1.cust_contact
+FROM Customers AS c1, Customers AS c2
+WHERE c1.cust_name = c2.cust_name
+AND c2.cust_contact = 'Jim Jones';
+'''),         
+     
+    ('''
+基于Customers和Orders表：  
+检索所有顾客(cust_id)及其订单数(order_num为订单号):包括那些至今尚未下订单的顾客;
+
+预期结果
+    
++------------+---------+
+| cust_id    | num_ord |
++------------+---------+
+| 1000000001 |       2 |
+| 1000000002 |       0 |
+| 1000000003 |       1 |
+| 1000000004 |       1 |
+| 1000000005 |       1 |
++------------+---------+
+
+
+''',  
+'''
+SELECT Customers.cust_id,
+COUNT(Orders.order_num) AS num_ord
+FROM Customers LEFT OUTER JOIN Orders
+ON Customers.cust_id = Orders.cust_id
+GROUP BY Customers.cust_id;
+'''),         
+                
+            
 ]
     
 bianchens = [
@@ -109,7 +178,8 @@ Reverse number is 27501''',
      '''请将当前目录的*py 重命名为*.pyc''',   
 ]
     
-ceshidians = ["支付宝APP安卓端安全测试", "ubuntu 20.04安装mysql", "ubuntu 20.04使用cp拷贝目录"]
+ceshidians = ["支付宝APP安卓端安全测试", "ubuntu 20.04安装mysql",
+              "ubuntu 20.04使用cp拷贝目录", "钉钉弱网测试"]
 
 ceshis = [
     '请列出至少4种测试用例设计方法，并简介其使用场景',
@@ -126,28 +196,90 @@ f = open("shiti.txt",'w')
 description = '''欢迎参加平安产险数据平台测试组的面试！
 
 本次考试共5道题，为后续工作强相关内容，每题1分， 总计5分，通过分为3分。
-请在打印纸上作答。答题时间50分钟。
-考试不能代表全部，如果您有其他方面的特长，请在后续面试充分展现自己，谢谢！ 
+答题时间50分钟。考试不能代表全部，如果您有其他方面的特长，请在后续面试充分展现自己，谢谢！ 
 联系人 钉钉或微信 pythontesting 
 
 1,SQL基础题
 
-mysql> select * from myflixdb.orders;
-+----+------+---------+--------+
-| id | name | product | number |
-+----+------+---------+--------+
-|  1 | A    | pen     | 2      |
-|  2 | B    | hat     | 4      |
-|  3 | C    | car     | 1      |
-|  4 | A    | book    | 2      |
-|  5 | B    | pen     | 5      |
-|  6 | A    | pen     | 5      |
-|  7 | E    | apple   | 4      |
-|  8 | C    | pencil  | 1      |
-|  9 | A    | book    | 2      |
-| 10 | B    | pen     | 2      |
-...
-+----+------+---------+--------+
+
+'''
+
+dbs = '''
+
+数据库参考（只需关注题目中提及的表即可）：
+
+mysql> select * from Customers;
++------------+---------------+----------------------+-----------+------------+----------+--------------+--------------------+-----------------------+
+| cust_id    | cust_name     | cust_address         | cust_city | cust_state | cust_zip | cust_country | cust_contact       | cust_email            |
++------------+---------------+----------------------+-----------+------------+----------+--------------+--------------------+-----------------------+
+| 1000000001 | Village Toys  | 200 Maple Lane       | Detroit   | MI         | 44444    | USA          | John Smith         | sales@villagetoys.com |
+| 1000000002 | Kids Place    | 333 South Lake Drive | Columbus  | OH         | 43333    | USA          | Michelle Green     | NULL                  |
+| 1000000003 | Fun4All       | 1 Sunny Place        | Muncie    | IN         | 42222    | USA          | Jim Jones          | jjones@fun4all.com    |
+| 1000000004 | Fun4All       | 829 Riverside Drive  | Phoenix   | AZ         | 88888    | USA          | Denise L. Stephens | dstephens@fun4all.com |
+| 1000000005 | The Toy Store | 4545 53rd Street     | Chicago   | IL         | 54545    | USA          | Kim Howard         | NULL                  |
++------------+---------------+----------------------+-----------+------------+----------+--------------+--------------------+-----------------------+
+
+mysql> select * from OrderItems;
++-----------+------------+---------+----------+------------+
+| order_num | order_item | prod_id | quantity | item_price |
++-----------+------------+---------+----------+------------+
+|     20005 |          1 | BR01    |      100 |       5.49 |
+|     20005 |          2 | BR03    |      100 |      10.99 |
+|     20006 |          1 | BR01    |       20 |       5.99 |
+|     20006 |          2 | BR02    |       10 |       8.99 |
+|     20006 |          3 | BR03    |       10 |      11.99 |
+|     20007 |          1 | BR03    |       50 |      11.49 |
+|     20007 |          2 | BNBG01  |      100 |       2.99 |
+|     20007 |          3 | BNBG02  |      100 |       2.99 |
+|     20007 |          4 | BNBG03  |      100 |       2.99 |
+|     20007 |          5 | RGAN01  |       50 |       4.49 |
+|     20008 |          1 | RGAN01  |        5 |       4.99 |
+|     20008 |          2 | BR03    |        5 |      11.99 |
+|     20008 |          3 | BNBG01  |       10 |       3.49 |
+|     20008 |          4 | BNBG02  |       10 |       3.49 |
+|     20008 |          5 | BNBG03  |       10 |       3.49 |
+|     20009 |          1 | BNBG01  |      250 |       2.49 |
+|     20009 |          2 | BNBG02  |      250 |       2.49 |
+|     20009 |          3 | BNBG03  |      250 |       2.49 |
++-----------+------------+---------+----------+------------+
+
+mysql> select * from Orders;
++-----------+---------------------+------------+
+| order_num | order_date          | cust_id    |
++-----------+---------------------+------------+
+|     20005 | 2012-05-01 00:00:00 | 1000000001 |
+|     20006 | 2012-01-12 00:00:00 | 1000000003 |
+|     20007 | 2012-01-30 00:00:00 | 1000000004 |
+|     20008 | 2012-02-03 00:00:00 | 1000000005 |
+|     20009 | 2012-02-08 00:00:00 | 1000000001 |
++-----------+---------------------+------------+
+
+mysql> select * from Products;
++---------+---------+---------------------+------------+-----------------------------------------------------------------------+
+| prod_id | vend_id | prod_name           | prod_price | prod_desc                                                             |
++---------+---------+---------------------+------------+-----------------------------------------------------------------------+
+| BNBG01  | DLL01   | Fish bean bag toy   |       3.49 | Fish bean bag toy, complete with bean bag worms with which to feed it |
+| BNBG02  | DLL01   | Bird bean bag toy   |       3.49 | Bird bean bag toy, eggs are not included                              |
+| BNBG03  | DLL01   | Rabbit bean bag toy |       3.49 | Rabbit bean bag toy, comes with bean bag carrots                      |
+| BR01    | BRS01   | 8 inch teddy bear   |       5.99 | 8 inch teddy bear, comes with cap and jacket                          |
+| BR02    | BRS01   | 12 inch teddy bear  |       8.99 | 12 inch teddy bear, comes with cap and jacket                         |
+| BR03    | BRS01   | 18 inch teddy bear  |      11.99 | 18 inch teddy bear, comes with cap and jacket                         |
+| RGAN01  | DLL01   | Raggedy Ann         |       4.99 | 18 inch Raggedy Ann doll                                              |
+| RYL01   | FNG01   | King doll           |       9.49 | 12 inch king doll with royal garments and crown                       |
+| RYL02   | FNG01   | Queen doll          |       9.49 | 12 inch queen doll with royal garments and crown                      |
++---------+---------+---------------------+------------+-----------------------------------------------------------------------+
+
+mysql> select * from Vendors;
++---------+-----------------+-----------------+------------+------------+----------+--------------+
+| vend_id | vend_name       | vend_address    | vend_city  | vend_state | vend_zip | vend_country |
++---------+-----------------+-----------------+------------+------------+----------+--------------+
+| BRE02   | Bear Emporium   | 500 Park Street | Anytown    | OH         | 44333    | USA          |
+| BRS01   | Bears R Us      | 123 Main Street | Bear Town  | MI         | 44444    | USA          |
+| DLL01   | Doll House Inc. | 555 High Street | Dollsville | CA         | 99999    | USA          |
+| FNG01   | Fun and Games   | 42 Galaxy Road  | London     | NULL       | N16 6PS  | England      |
+| FRB01   | Furball Inc.    | 1000 5th Avenue | New York   | NY         | 11111    | USA          |
+| JTS01   | Jouets et ours  | 1 Rue Amusement | Paris      | NULL       | 45678    | France       |
++---------+-----------------+-----------------+------------+------------+----------+--------------+
 
 '''
 print(description)
@@ -157,7 +289,8 @@ print(shiti[0])
 f.write(shiti[0] + '\n')
 print('\n')
 print(shiti[1])
-
+print(dbs)
+f.write(dbs)
 description = '\n\n2,编程题 -- 此题如能在本机(unbuntu)上调试出来更佳。\n'
 print(description)
 f.write(description)
