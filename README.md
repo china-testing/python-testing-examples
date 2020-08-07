@@ -1,9 +1,9 @@
 # python-testing-examples
 
 
-python测试开发实例
+python测试开发练习
 
-- shijuanpy  
+- shijuan.py  
 
 	某上市公司测试开发面试题随机生成代码。
 
@@ -43,3 +43,11 @@ python测试开发实例
  * [Python经典面试题: 用3种方法实现堆栈和队列并示例实际应用场景](https://www.jianshu.com/p/c990427ca608)
 
  * [python 3.7极速入门教程8语言比较与面试考试试题](https://www.jianshu.com/p/940664d1824a)
+ 
+ 
+### 其他
+
+ * [python3快速入门教程1 turtle绘图-1开始](https://china-testing.github.io/python3_crash1.html)
+ * [接口自动化性能测试线上培训大纲](https://china-testing.github.io/testing_training.html)
+ * [python测试开发自动化测试数据分析人工智能自学每周一练](https://china-testing.github.io/python_weeks.html)
+ * [软件自动化测试初学者忠告](https://china-testing.github.io/testing_automation_tips.html)
