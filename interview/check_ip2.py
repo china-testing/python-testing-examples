@@ -25,4 +25,4 @@ def address(s, state=()):
 if __name__ == '__main__':
     
     tmp = '123425'
-    print(address(tmp))
+    print(tmp, "可能的ip有", address(tmp))

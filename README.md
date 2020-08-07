@@ -3,11 +3,11 @@
 
 python测试开发实例
 
-### 基础
+### basic目录：基础
 
-* [《python测试开发实战》基础部分实例1-猜数](https://www.jianshu.com/p/f77e22e3b27c)
+* [《python测试开发实战》基础部分实例1-猜数](https://www.jianshu.com/p/f77e22e3b27c) 1_guessing_game.py
 
-* [《python测试开发实战》基础部分实例2-实现内置函数sum](https://www.jianshu.com/p/d6e270791f39)
+* [《python测试开发实战》基础部分实例2-实现内置函数sum](https://www.jianshu.com/p/d6e270791f39) 2_summing_numbers.py
 
 
 ### interview目录：收集名企面试题。

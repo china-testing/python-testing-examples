@@ -20,5 +20,5 @@ def check_ip(address):
 
 if __name__ == '__main__':
     
-    print(check_ip('1.2.3.4'))
-    print(check_ip('1.2.3.444'))
+    print("check_ip('1.2.3.4')", ": ", check_ip('1.2.3.4'))
+    print("check_ip('1.2.3.444')", ": ", check_ip('1.2.3.444'))
