@@ -3,6 +3,10 @@
 
 python测试开发实例
 
+- shijuanpy  
+
+	某上市公司测试开发面试题随机生成代码。
+
 ### basic目录：基础
 
 * [《python测试开发实战》基础部分实例1-猜数](https://www.jianshu.com/p/f77e22e3b27c) 1_guessing_game.py
