@@ -34,8 +34,8 @@ python测试开发实例
 
  * [python字符串面试笔试题](https://www.jianshu.com/p/765879a94522)
 
-[Python经典面试题](https://www.jianshu.com/p/55cc75c99061)
+ * [Python经典面试题](https://www.jianshu.com/p/55cc75c99061)
 
-[Python经典面试题: 用3种方法实现堆栈和队列并示例实际应用场景](https://www.jianshu.com/p/c990427ca608)
+ * [Python经典面试题: 用3种方法实现堆栈和队列并示例实际应用场景](https://www.jianshu.com/p/c990427ca608)
 
-[python 3.7极速入门教程8语言比较与面试考试试题](https://www.jianshu.com/p/940664d1824a)
+ * [python 3.7极速入门教程8语言比较与面试考试试题](https://www.jianshu.com/p/940664d1824a)
