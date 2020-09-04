@@ -2,28 +2,27 @@
 目录
 =================
 
-         * [basic目录：基础](#basic目录基础)
-         * [python docker快速入门3](#python-docker快速入门3)
-         * [interview目录：收集名企面试题。](#interview目录收集名企面试题)
-         * [其他](#其他)
+   * [basic目录：基础](#hr)   
+   * [python docker快速入门3](#python_docker)
+   * [python测试开发笔试题面试题](#python-questions)   
+   * [软件测试](#testing)   
 
 
-
-
+	
 python测试开发练习
 
 - shijuan.py  
 
 	某上市公司测试开发面试题随机生成代码。
 
-### basic目录：基础
+### basic
 
 * [《python测试开发实战》基础部分实例1-猜数](https://www.jianshu.com/p/f77e22e3b27c) 1_guessing_game.py
 
 * [《python测试开发实战》基础部分实例2-实现内置函数sum](https://www.jianshu.com/p/d6e270791f39) 2_summing_numbers.py
 
 
-### python docker快速入门3
+### python_docker
 
 * [python docker快速入门1介绍](https://www.jianshu.com/p/c2c3ade30a78) 
 
