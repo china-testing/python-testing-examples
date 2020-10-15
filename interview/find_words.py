@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# 技术支持：dwz.cn/qkEfX1u0 项目实战讨论QQ群630011153 144081101
-# CreateDate: 2019-12-29
+# 技术支持：http://t.cn/A6b9yS16 项目实战讨论Q群144081101 6089740
+# CreateDate: 2020-10-15
 
 text = '''Call me Ishmael. Some years ago - never mind how long precisely - having
 little or no money in my purse, and nothing particular to interest me

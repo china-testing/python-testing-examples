@@ -170,12 +170,16 @@ python的预期结果(尽量不超过3行搞定):
     
 [['Call', 'Ishmael.', 'Some', 'years', 'never', 'mind', 'long', 'precisely', 'having'], ['little', 'money', 'purse,', 'nothing', 'particular', 'interest'], ['shore,', 'thought', 'would', 'sail', 'about', 'little', 'watery', 'part'], ['world.', 'have', 'driving', 'spleen,', 'regulating'], ['circulation.', 'Moby', 'Dick']]]
     ''',
-    '''请使用linux命令、shell或python、java等实现字符串反序，以python为例：
-$ ./numbers.py 10572 
- 
-Reverse number is 27501''',
-    '''请使用linux命令、shell或python、java等向http://httpbin.org/post，提交json '{"kew":"value"}' ''',
-     '''请将当前目录的*py 重命名为*.pyc''',   
+    '''某项目要求字符串只能包含a-zA-Z0-9，
+    请使用linux命令、shell或python、java等实现字符串检查,以python为例
+$ python test.py test
+True
+$ python test.py test@
+False
+
+''',
+    '''请使用linux命令、shell或python、java等向http://httpbin.org/post，
+    提交json '{"kew":"value"}' ，并提取返回结果中origin部分的内容，即本地出口IP的地址''',  
 ]
     
 ceshidians = ["支付宝APP安卓端安全测试", "ubuntu 20.04安装mysql",

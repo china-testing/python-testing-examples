@@ -7,15 +7,18 @@
 1,SQL基础题
 
 
-选择OrderItems表中产品名prod_id为C-Z开头的行(注意prod_id还有一些是_或中文等开头的)。：
-     
+基于表OrderItems, Products, Vendors：显示order_num为20007的物品的prod_name, vend_name, prod_price, quantity
 预期结果
-+-----------+------------+---------+----------+------------+
-| order_num | order_item | prod_id | quantity | item_price |
-+-----------+------------+---------+----------+------------+
-|     20007 |          5 | RGAN01  |       50 |       4.49 |
-|     20008 |          1 | RGAN01  |        5 |       4.99 |
-+-----------+------------+---------+----------+------------+
++---------------------+-----------------+------------+----------+
+| prod_name           | vend_name       | prod_price | quantity |
++---------------------+-----------------+------------+----------+
+| 18 inch teddy bear  | Bears R Us      |      11.99 |       50 |
+| Fish bean bag toy   | Doll House Inc. |       3.49 |      100 |
+| Bird bean bag toy   | Doll House Inc. |       3.49 |      100 |
+| Rabbit bean bag toy | Doll House Inc. |       3.49 |      100 |
+| Raggedy Ann         | Doll House Inc. |       4.99 |       50 |
++---------------------+-----------------+------------+----------+
+
 
 
 
@@ -98,22 +101,25 @@ mysql> select * from Vendors;
 
 
 2,编程题 -- 此题如能在本机(unbuntu)上调试出来更佳。
-某项目要求字符串只能包含a-zA-Z0-9，
-    请使用linux命令、shell或python、java等实现字符串检查,以python为例
-$ python test.py test
-True
-$ python test.py test@
-False
+在以下文本中找出 每行中长度超过3的单词:
+Call me Ishmael. Some years ago - never mind how long precisely - having
+little or no money in my purse, and nothing particular to interest me
+on shore, I thought I would sail about a little and see the watery part
+of the world. It is a way I have of driving off the spleen, and regulating
+the circulation. - Moby Dick
 
-
+python的预期结果(尽量不超过3行搞定):
+    
+[['Call', 'Ishmael.', 'Some', 'years', 'never', 'mind', 'long', 'precisely', 'having'], ['little', 'money', 'purse,', 'nothing', 'particular', 'interest'], ['shore,', 'thought', 'would', 'sail', 'about', 'little', 'watery', 'part'], ['world.', 'have', 'driving', 'spleen,', 'regulating'], ['circulation.', 'Moby', 'Dick']]]
+    
 
 
 3,测试点设计: 请列出至少15个测试点
-ubuntu 20.04安装mysql
+钉钉弱网测试
 
 
 4,测试基础题
-性能测试需要关注哪些指标，请列出至少5个，并简述含义?列出3个你在性能测试中发现的问题。性能测试如果发现问题？
+你的测试职业发展规划是？
 
 5.描述下你测试过产品的前后台架构，建议画图描述, 可以手写拍照
 描述你在上述产品你发现的跨至少３个模块的bug，至少３个。

@@ -24,7 +24,7 @@ python测试开发练习
 
 ### python_docker
 
-本系列文章是在某上市公司的讲座，技术支持qq群：144081101　630011153
+本系列文章是在某上市公司的讲座讲义，技术支持qq群：144081101　630011153
 
 * [python docker快速入门1介绍](https://www.jianshu.com/p/c2c3ade30a78) 
 
