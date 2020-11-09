@@ -1,11 +1,9 @@
 
-目录
-=================
-
-   * [basic目录：基础](#hr)   
-   * [python docker快速入门3](#python_docker)
-   * [python测试开发笔试题面试题](#python-questions)   
-   * [软件测试](#testing)   
+   * [目录](#目录)
+         * [basic](#basic)
+         * [python_docker](#python_docker)
+         * [interview目录：收集名企面试题。](#interview目录收集名企面试题)
+         * [其他](#其他)
 
 
 	
@@ -64,6 +62,13 @@ python测试开发练习
 
  * [python 3.7极速入门教程8语言比较与面试考试试题](https://www.jianshu.com/p/940664d1824a)
  
+### 测试管理
+
+ * [如何衡量软件测试的绩效1](https://www.jianshu.com/p/fea0a41f953c)
+
+ * [如何衡量软件测试的绩效2](https://www.jianshu.com/p/28c63a61355d)
+
+ * [如何衡量软件测试的绩效3](https://www.jianshu.com/p/e297a1cea8cd)
  
 ### 其他
 

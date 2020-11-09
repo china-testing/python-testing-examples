@@ -7,17 +7,21 @@
 1,SQL基础题
 
 
-基于表OrderItems, Products, Vendors：显示order_num为20007的物品的prod_name, vend_name, prod_price, quantity
+
+基于Customers和Orders表：  
+检索所有顾客(cust_id)及其订单数(order_num为订单号):包括那些至今尚未下订单的顾客;
+
 预期结果
-+---------------------+-----------------+------------+----------+
-| prod_name           | vend_name       | prod_price | quantity |
-+---------------------+-----------------+------------+----------+
-| 18 inch teddy bear  | Bears R Us      |      11.99 |       50 |
-| Fish bean bag toy   | Doll House Inc. |       3.49 |      100 |
-| Bird bean bag toy   | Doll House Inc. |       3.49 |      100 |
-| Rabbit bean bag toy | Doll House Inc. |       3.49 |      100 |
-| Raggedy Ann         | Doll House Inc. |       4.99 |       50 |
-+---------------------+-----------------+------------+----------+
+    
++------------+---------+
+| cust_id    | num_ord |
++------------+---------+
+| 1000000001 |       2 |
+| 1000000002 |       0 |
+| 1000000003 |       1 |
+| 1000000004 |       1 |
+| 1000000005 |       1 |
++------------+---------+
 
 
 
@@ -101,16 +105,12 @@ mysql> select * from Vendors;
 
 
 2,编程题 -- 此题如能在本机(unbuntu)上调试出来更佳。
-在以下文本中找出 每行中长度超过3的单词:
-Call me Ishmael. Some years ago - never mind how long precisely - having
-little or no money in my purse, and nothing particular to interest me
-on shore, I thought I would sail about a little and see the watery part
-of the world. It is a way I have of driving off the spleen, and regulating
-the circulation. - Moby Dick
+请使用linux命令、shell或python、java等向http://httpbin.org/post，
+    提交json '{"key":"value"}' ，并提取返回结果中origin部分的内容，即本地出口IP的地址
+    以python为例：
+    $ python test.py 
+    112.97.60.185
 
-python的预期结果(尽量不超过3行搞定):
-    
-[['Call', 'Ishmael.', 'Some', 'years', 'never', 'mind', 'long', 'precisely', 'having'], ['little', 'money', 'purse,', 'nothing', 'particular', 'interest'], ['shore,', 'thought', 'would', 'sail', 'about', 'little', 'watery', 'part'], ['world.', 'have', 'driving', 'spleen,', 'regulating'], ['circulation.', 'Moby', 'Dick']]]
     
 
 
@@ -119,7 +119,7 @@ python的预期结果(尽量不超过3行搞定):
 
 
 4,测试基础题
-你的测试职业发展规划是？
+常用的资源监控命令或方法有哪些？
 
 5.描述下你测试过产品的前后台架构，建议画图描述, 可以手写拍照
 描述你在上述产品你发现的跨至少３个模块的bug，至少３个。

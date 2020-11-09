@@ -26,7 +26,7 @@ selects = [
 select * from OrderItems where prod_id in (select prod_id from OrderItems group by prod_id having count(*) >= 4);
 '''),
          
-    ('''选择OrderItems表中产品价格(prod_price)r都大于等于9的供应商(vend_id)的订单
+    ('''选择Products表中产品价格(prod_price)都大于等于9的供应商(vend_id)的订单
 预期结果
 +---------+---------+------------+------------+--------------------------------------------------+
 | prod_id | vend_id | prod_name  | prod_price | prod_desc                                        |
@@ -179,7 +179,21 @@ False
 
 ''',
     '''请使用linux命令、shell或python、java等向http://httpbin.org/post，
-    提交json '{"kew":"value"}' ，并提取返回结果中origin部分的内容，即本地出口IP的地址''',  
+    提交json '{"key":"value"}' ，并提取返回结果中origin部分的内容，即本地出口IP的地址
+    以python为例：
+    $ python test.py 
+    112.97.60.185
+
+    ''',  
+       
+    '''请使用python、java等定义一个函数或方法来去掉字符串中连续的重复字母，函数体以一行为佳。
+    以python为例： 
+    print(no_consecutive_letters("PPYYYTTHON"))  # 返回PYTHON
+    print(no_consecutive_letters("PPyyythonnn")) # 返回Python
+    print(no_consecutive_letters("Java")) # 返回Java
+    print(no_consecutive_letters("PPPHHHPPP")) # 返回PHP
+
+    ''',         
 ]
     
 ceshidians = ["支付宝APP安卓端安全测试", "ubuntu 20.04安装mysql",
