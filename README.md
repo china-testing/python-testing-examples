@@ -65,11 +65,15 @@ python测试开发练习
  
 ### 测试管理
 
+	本系列文章是在某上市公司的讲座讲义，技术支持qq群：144081101
+
  * [如何衡量软件测试的绩效1](https://www.jianshu.com/p/fea0a41f953c)
 
  * [如何衡量软件测试的绩效2](https://www.jianshu.com/p/28c63a61355d)
 
  * [如何衡量软件测试的绩效3](https://www.jianshu.com/p/e297a1cea8cd)
+ 
+ * [五步重塑软件测试流程](https://www.jianshu.com/p/222a6f966e5f)
  
 ### 其他
 
