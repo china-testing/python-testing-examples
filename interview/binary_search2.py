@@ -3,9 +3,7 @@
 # 技术支持：dwz.cn/qkEfX1u0 项目实战讨论QQ群630011153 144081101
 # CreateDate: 2019-12-29
 
-
-def binary_search(items, item, lower=0, upper=None):
-    
+def bin_search(items,lower=0, upper=None, item=0):
     if upper is None: 
         upper = len(items) - 1
         
@@ -14,13 +12,12 @@ def binary_search(items, item, lower=0, upper=None):
     else:
         middle = (lower + upper) // 2
         if item > items[middle]:
-            return binary_search(items, item, middle + 1, upper)
+            return bin_search(items, middle + 1, upper,item)
         else:
-            return binary_search(items, item, lower, middle)
-        
+            return bin_search(items, lower, middle,item)
+
 if __name__ == '__main__':
-    
-    seq = [34, 67, 8, 123, 4, 100, 95]
-    seq.sort()
-    print(binary_search(seq, 34)) 
-    print(binary_search(seq, 100)) 
+    l = list(range(1,30,3)) # [1, 4, 7, 10, 13, 16, 19, 22, 25, 28]
+    print(bin_search(l,0,len(l)-1, 7)) # return 2
+    print(bin_search(l,0,len(l)-1, 1)) # return 0 
+    print(bin_search(l,0,len(l)-1, 29)) # return None
