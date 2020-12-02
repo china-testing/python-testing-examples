@@ -21,3 +21,4 @@ if __name__ == '__main__':
     print(bin_search(l,0,len(l)-1, 7)) # return 2
     print(bin_search(l,0,len(l)-1, 1)) # return 0 
     print(bin_search(l,0,len(l)-1, 29)) # return None
+
