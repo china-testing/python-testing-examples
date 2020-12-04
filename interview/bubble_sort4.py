@@ -4,16 +4,16 @@
 # CreateDate: 2019-12-29
 
 '''冒泡排序经典python面试题'''
-def bubble_sort(l):
-    n = len(l) - 1
-    for i in range(n):
+def bubble_sort(items):
+    change = True
+    num = len(items) -1 
+    while change and num > 0:
         change = False
-        for j in range(n-i):
-            if l[j] > l[j+1]:
-                l[j+1], l[j] = l[j], l[j+1]
-                change = True            
-        if not change:
-            break
+        for i in range(num):
+            if items[i] > items[i+1]:
+                change = True
+                items[i], items[i+1] = items[i+1], items[i]
+        num -= 1
         
 if __name__ == '__main__':
     l = [21,6,9,33,3] 

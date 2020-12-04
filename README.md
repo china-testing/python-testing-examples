@@ -34,12 +34,12 @@ python测试开发练习
 ### interview目录：收集名企面试题。
 
 	如果您有好的题目分享，请联系钉钉或微信 pythontesting。 邮箱 xurongzhong#126.com
-
+	
+ * [python笔试面试项目实战2020百练15-某一线大厂的冒泡排序面试套路](https://www.jianshu.com/p/5fb05104f6e3) 	bubble_sort1.py bubble_sort2.py bubble_sort3.py
+ 
  * [python笔试面试项目实战2020百练7使用正则表达式判断IP是否合法-flexport机试题](https://www.jianshu.com/p/e331da96917d)  check_ip2.py  check_ip.py
  
  * [python笔试面试项目实战2020百练1二分查找法(虾皮面试题)](https://www.jianshu.com/p/67127211e9e7) binary_search1.py  binary_search2.py
- 
-  * [python笔试面试项目实战2020百练1二分查找法(虾皮面试题)](https://www.jianshu.com/p/0210e22f6c8d) is_coprime.py
 
  * [python经典面试题：列表和元组有什么异同？](https://www.jianshu.com/p/f13bf2bf1f05)
 
