@@ -4,6 +4,7 @@ Table of Contents
    * [python_docker](#python_docker)
    * [interview目录：收集名企面试题。](#interview目录收集名企面试题)
    * [测试管理](#测试管理)   
+   * [软件工程快速入门教程](#软件工程快速入门教程)   
    * [其他](#其他)
 
 
@@ -37,11 +38,15 @@ python测试开发练习
 	
  * [python笔试面试项目实战2020百练15-某一线大厂的冒泡排序面试套路](https://www.jianshu.com/p/5fb05104f6e3) 	bubble_sort1.py bubble_sort2.py bubble_sort3.py
  
- * [python笔试面试项目实战2020百练7使用正则表达式判断IP是否合法-flexport机试题](https://www.jianshu.com/p/e331da96917d)  check_ip2.py  check_ip.py
+ * [python笔试面试项目实战2020百练7使用正则表达式判断IP是否合法-flexport机试题](https://www.jianshu.com/p/e331da96917d)  bubble_sort*.py 
  
+ * [python笔试面试项目实战2020百练5插入排序希尔排序](https://www.jianshu.com/p/220a08ea7d17) 
+ 
+ * [python笔试面试项目实战2020百练2选择排序冒泡排序](https://www.jianshu.com/p/67127211e9e7) binary_search1.py  binary_search2.py select_sort1.py
+  
  * [python笔试面试项目实战2020百练1二分查找法(虾皮面试题)](https://www.jianshu.com/p/67127211e9e7) binary_search1.py  binary_search2.py
 
- * [python经典面试题：列表和元组有什么异同？](https://www.jianshu.com/p/f13bf2bf1f05)
+ * [python经典面试题：列表和元组有什么异同？](https://www.jianshu.com/p/f13bf2bf1f05) quick_sort1.py select_sort1.py
 
  * [python requests库面试笔试题](https://www.jianshu.com/p/374dca87802b)
 
@@ -74,6 +79,21 @@ python测试开发练习
  * [如何衡量软件测试的绩效3](https://www.jianshu.com/p/e297a1cea8cd)
  
  * [五步重塑软件测试流程](https://www.jianshu.com/p/222a6f966e5f)
+ 
+### 软件工程快速入门教程
+
+ 
+[软件工程快速入门教程1- SDLC软件开发生命周期](https://www.jianshu.com/p/cf04d4167448)
+
+[软件工程快速入门教程2- 瀑布模型](https://www.jianshu.com/p/7f2d7e2a3556)
+
+[软件工程快速入门教程3- 增量模型](https://www.jianshu.com/p/c55843620bbb)
+
+[软件工程快速入门教程4- 螺旋模型](https://www.jianshu.com/p/f4ac30828827)
+
+[软件工程快速入门教程5- RAD快速应用程序开发模型](https://www.jianshu.com/p/eeec6e92b23a)
+
+[软件工程快速入门教程6- 原型模型](https://www.jianshu.com/p/ef97b5c7c408) 
  
 ### 其他
 

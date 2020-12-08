@@ -4,7 +4,7 @@
 # CreateDate: 2019-12-29
 
 from check_ip import check_ip as check
-
+'''state用于存储分割点的位置，总共三个点'''
 def address(s, state=()):
     result = []
     length = len(s)
@@ -13,7 +13,7 @@ def address(s, state=()):
         if pos not in state:
             if len(state) == 2:
                 seqs = state + (pos,)
-                ip_str = f'{s[:seqs[0]]}.{s[seqs[0]:seqs[1]]}.{s[seqs[1]:seqs[2]]}.{s[seqs[1]:]}'
+                ip_str = f'{s[:seqs[0]]}.{s[seqs[0]:seqs[1]]}.{s[seqs[1]:seqs[2]]}.{s[seqs[2]:]}'
                 if check(ip_str):
                     result.append(ip_str)
             else:
