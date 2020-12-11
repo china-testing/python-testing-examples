@@ -4,7 +4,8 @@ Table of Contents
    * [python_docker](#python_docker)
    * [interview目录：收集名企面试题。](#interview目录收集名企面试题)
    * [测试管理](#测试管理)   
-   * [软件工程快速入门教程](#软件工程快速入门教程)   
+   * [软件工程快速入门教程](#软件工程快速入门教程) 
+   * [测试管理快速入门](#测试管理快速入门)      
    * [其他](#其他)
 
 
@@ -95,6 +96,57 @@ python测试开发练习
 
 [软件工程快速入门教程6- 原型模型](https://www.jianshu.com/p/ef97b5c7c408) 
  
+[软件工程快速入门教程7-能力成熟度模型CMM](https://www.jianshu.com/p/91f552e1fee4)
+
+[软件工程快速入门教程7-能力成熟度模型CMM](https://www.jianshu.com/p/91f552e1fee4)
+
+[软件工程快速入门教程8- 多层架构](https://www.jianshu.com/p/57c3f1715b6f)
+
+[软件工程快速入门教程9- 年薪70万的全栈需要什么技能？](https://www.jianshu.com/p/11d616d9f9f4)
+
+[软件工程快速入门教程10- 函数式编程](https://www.jianshu.com/p/226a8ccd86d2)
+
+[软件工程快速入门教程11 - MVC](https://www.jianshu.com/p/4106a3ba1c1b)
+
+[软件工程快速入门教程12 -2019年22个最佳软件开发工具](https://www.jianshu.com/p/e4c98c269feb)
+
+[软件工程快速入门教程13 -2019年Python、Java、c++等最佳代码覆盖工具](https://www.jianshu.com/p/3ceae82be197)
+
+[软件工程快速入门教程14 -2019年最佳代码评审及静态分析工具](https://www.jianshu.com/p/1740e66638d1)
+
+[软件工程快速入门教程15 -2019年最佳编程语言](https://www.jianshu.com/p/080b5fb559c0)
+
+
+### 测试管理快速入门
+
+[测试管理快速入门1简介](https://www.jianshu.com/p/723234985818)
+
+[测试管理快速入门2阶段](https://www.jianshu.com/p/fab7b12176b1)
+
+[测试管理快速入门3风险分析](https://www.jianshu.com/p/1dd0ca582eb0)
+
+[测试管理快速入门4评估技术](https://www.jianshu.com/p/c24a4f89fa4e)
+
+[测试管理快速入门5团队组建](https://www.jianshu.com/p/10fee24993f9)
+
+[测试管理快速入门6测试计划](https://www.jianshu.com/p/ae9218c816be)
+
+[测试管理快速入门7测试监控和测试控制](https://www.jianshu.com/p/b2212e571376)
+
+[测试管理快速入门8问题管理](https://www.jianshu.com/p/78a471ce4d82)
+
+[软件测试管理快速入门9测试报告](https://www.jianshu.com/p/fb082c69a375)
+
+[测试管理快速入门10 Software Quality Assurance(SQA)：计划，审计和审核](https://www.jianshu.com/p/8ac3ccee1c12)
+
+[软件测试管理快速入门11-BUG管理](https://www.jianshu.com/p/0fe637d4b3f7)
+
+[软件测试管理快速入门12-使用PDCA模型的测试过程改进(TPI Test Process Improvement)](https://www.jianshu.com/p/3333287aa9f2)
+
+[软件测试管理快速入门13-如何选择自动化测试工具](https://www.jianshu.com/p/75fda0983b09)
+
+[软件测试管理快速入门14-人力管理技巧](https://www.jianshu.com/p/18297fb2cf29)
+
 ### 其他
 
  * [python3快速入门教程1 turtle绘图-1开始](https://china-testing.github.io/python3_crash1.html)
