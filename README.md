@@ -98,8 +98,6 @@ python测试开发练习
  
 [软件工程快速入门教程7-能力成熟度模型CMM](https://www.jianshu.com/p/91f552e1fee4)
 
-[软件工程快速入门教程7-能力成熟度模型CMM](https://www.jianshu.com/p/91f552e1fee4)
-
 [软件工程快速入门教程8- 多层架构](https://www.jianshu.com/p/57c3f1715b6f)
 
 [软件工程快速入门教程9- 年薪70万的全栈需要什么技能？](https://www.jianshu.com/p/11d616d9f9f4)
@@ -119,6 +117,8 @@ python测试开发练习
 
 ### 测试管理快速入门
 
+	本系列文章是在某上市公司的讲座讲义，技术支持qq群：144081101
+
 [测试管理快速入门1简介](https://www.jianshu.com/p/723234985818)
 
 [测试管理快速入门2阶段](https://www.jianshu.com/p/fab7b12176b1)
@@ -131,7 +131,7 @@ python测试开发练习
 
 [测试管理快速入门6测试计划](https://www.jianshu.com/p/ae9218c816be)
 
-[测试管理快速入门7测试监控和测试控制](https://www.jianshu.com/p/b2212e571376)
+[测试管理快速入门7测试监控和测试控制](https://www.jianshu.com/p/5eefb291a6ce)
 
 [测试管理快速入门8问题管理](https://www.jianshu.com/p/78a471ce4d82)
 
