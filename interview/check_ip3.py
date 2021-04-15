@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# 技术支持：dwz.cn/qkEfX1u0 项目实战讨论QQ群630011153 144081101
+# 技术支持：dwz.cn/qkEfX1u0 项目实战讨论QQ群6089740 144081101
 # CreateDate: 2019-12-29
 
 import ipaddress
