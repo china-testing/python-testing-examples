@@ -7,17 +7,15 @@
 1,SQL基础题
 
 
-基于表OrderItems, Products, Vendors：显示order_num为20007的物品的prod_name, vend_name, prod_price, quantity
+基于Products表，列出具有两个以上价格（prod_price）大于等于4产品的供应商(vend_id)及产品数:。
+     
 预期结果
-+---------------------+-----------------+------------+----------+
-| prod_name           | vend_name       | prod_price | quantity |
-+---------------------+-----------------+------------+----------+
-| 18 inch teddy bear  | Bears R Us      |      11.99 |       50 |
-| Fish bean bag toy   | Doll House Inc. |       3.49 |      100 |
-| Bird bean bag toy   | Doll House Inc. |       3.49 |      100 |
-| Rabbit bean bag toy | Doll House Inc. |       3.49 |      100 |
-| Raggedy Ann         | Doll House Inc. |       4.99 |       50 |
-+---------------------+-----------------+------------+----------+
++---------+-----------+
+| vend_id | num_prods |
++---------+-----------+
+| BRS01   |         3 |
+| FNG01   |         2 |
++---------+-----------+
 
 
 
@@ -101,21 +99,22 @@ mysql> select * from Vendors;
 
 
 2,编程题 -- 此题如能在本机(unbuntu)上调试出来更佳。
-请使用linux命令、shell或python、java等向http://httpbin.org/post，
-    提交json '{"key":"value"}' ，并提取返回结果中origin部分的内容，即本地出口IP的地址
-    以python为例：
-    $ python test.py 
-    112.97.60.185
+某项目要求字符串只能包含a-zA-Z0-9，
+    请使用linux命令、shell或python、java等实现字符串检查,以python为例
+$ python test.py test
+True
+$ python test.py test@
+False
 
-    
+
 
 
 3,测试点设计: 请列出至少15个测试点
-钉钉弱网测试
+某电商APP购物篮功能测试
 
 
 4,测试基础题
-如何发现内存泄露？
+常用的资源监控命令或方法有哪些？
 
 5.描述下你测试过产品的前后台架构，建议画图描述, 可以手写拍照
 描述你在上述产品你发现的跨至少３个模块的bug，至少３个。

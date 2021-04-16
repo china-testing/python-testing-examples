@@ -2,6 +2,7 @@
 
 本次考试共5道题，为后续工作强相关内容，每题1分， 总计5分，通过分为3分。
 答题时间50分钟。考试不能代表全部，如果您有其他方面的特长，请在后续面试充分展现自己，谢谢！ 
+-- 可以上网查询，但是不要照搬，简答题建议回答不超过300字。
 联系人 钉钉或微信 pythontesting 
 
 1,SQL基础题
@@ -99,24 +100,23 @@ mysql> select * from Vendors;
 
 
 2,编程题 -- 此题如能在本机(unbuntu)上调试出来更佳。
-某项目要求字符串只能包含a-zA-Z0-9，
-    请使用linux命令、shell或python、java等实现字符串检查,以python为例
-$ python test.py test
-True
-$ python test.py test@
-False
+请使用linux命令、shell或python、java等向http://httpbin.org/post，
+    提交json '{"key":"value"}' ，并提取返回结果中origin部分的内容，即本地出口IP的地址
+    以python为例：
+    $ python test.py 
+    112.97.60.185
 
-
+    
 
 
 3,测试点设计: 请列出至少15个测试点
-某电商APP购物篮功能测试
+淘宝买菜APP购物篮性能测试
 
 
 4,测试基础题
-常用的资源监控命令或方法有哪些？
+请尝试同时登录1000台linux服务器，并拿回/proc/cpuinfo 和/var/log/dmesg的最后10行。
 
-5.描述下你测试过产品的前后台架构，建议画图描述, 可以手写拍照
+5.描述下你测试过产品的前后台架构(注意不是业务分类)，建议画图描述, 可以手写拍照
 描述你在上述产品你发现的跨至少３个模块的bug，至少３个。
 描述下你常去的国外的能解决问题的网站。
 

@@ -37,6 +37,10 @@ python测试开发练习
 
 	如果您有好的题目分享，请联系钉钉或微信 pythontesting。 邮箱 xurongzhong#126.com
 	
+ * [将所有的零移动到左边(facebook面试题)](https://www.jianshu.com/p/153aff60ec5b) move_zero2left.py
+	
+ * [递归的缓存策略(facebook面试题)](https://www.jianshu.com/p/3b0808dd90d0) fib3.py fib4.py
+	
  * [python笔试面试项目实战2020百练15-某一线大厂的冒泡排序面试套路](https://www.jianshu.com/p/5fb05104f6e3) 	bubble_sort1.py bubble_sort2.py bubble_sort3.py
  
  * [python笔试面试项目实战2020百练7使用正则表达式判断IP是否合法-flexport机试题](https://www.jianshu.com/p/e331da96917d)  bubble_sort*.py 
