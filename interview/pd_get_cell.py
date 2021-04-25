@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# 技术支持：dwz.cn/qkEfX1u0 项目实战讨论钉钉群21745728 钉钉群21745728 商务合作钉钉或微信: pythontesting
+# 技术支持：dwz.cn/qkEfX1u0 项目实战讨论钉钉群21745728 商务合作钉钉或微信: pythontesting
 # CreateDate: 2019-12-29
 # https://www.delftstack.com/howto/python-pandas/how-to-get-a-value-from-a-cell-of-a-dataframe/
 import pandas as pd
@@ -32,4 +32,3 @@ print(df.loc[2]['stock'])
 print(df.iat[2,1])
 print(df.at[2,'stock'])
 print(df.at[df.index[-3],'stock'])
-
