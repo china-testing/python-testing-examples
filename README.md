@@ -15,6 +15,17 @@ python测试开发练习
 - shijuan.py  
 
 	某上市公司测试开发面试题随机生成代码。
+	
+## 测试精品资料下载
+
+- [Software Testing Foundations, 5th - 2021.pdf](https://url97.ctfile.com/f/18113597-853966551-6ed72c) 获取访问密码 公众号：pythontesting 发送 密码
+
+- [Software Testing Automation Tips 50 Things Automation Engineers Should Know.pdf](https://url97.ctfile.com/f/18113597-843298101-6b3224?p=2274) 获取访问密码 公众号：pythontesting 发送 密码
+
+- [Performance Testing An ISTQB Certified Tester Foundation Level Specialist Certification Review.epub]( https://url97.ctfile.com/f/18113597-842033877-7092c2) 获取访问密码 公众号：pythontesting 发送 密码
+
+-[测试国际标准 质量模型25010_20130729_完整版.docx](https://url97.ctfile.com/f/18113597-854695755-a34349) 获取访问密码 公众号：pythontesting 发送 密码 
+
 
 ### basic
 
