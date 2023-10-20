@@ -1,0 +1,48 @@
+version: 1
+script:
+  - rm -rf AppDir  | true
+  - mkdir -p AppDir/usr/src
+  - git clone https://github.com/attify/attify-badge-tool AppDir/usr/src/
+  - mkdir -p AppDir/usr/share/icons
+  - mv AppDir/usr/src/appimage/attify-badge-tool.png AppDir/usr/share/icons/
+  - rm -rf AppDir/usr/src/{.git,appimage,images,README.md,requirements.txt}
+  - pip3 install --ignore-installed --prefix=/usr --root=AppDir strip-ansi pyserial
+
+AppDir:
+  path: ./AppDir
+
+  app_info:
+    id: org.attifyos.attify-badge-tool
+    name: Attify Badge Tool
+    icon: attify-badge-tool
+    version: 0.0.1
+    # Set the python executable as entry point
+    exec: usr/bin/python3
+    # Set the application main script path as argument. Use '$@' to forward CLI parameters
+    exec_args: "$APPDIR/usr/src/serial-console.py $@"
+
+  apt:
+    arch: amd64
+    sources:
+     - sourceline: 'deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse'
+       key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x871920d1991bc93c'
+
+    include:
+      - python3-minimal
+      - python3-pyqt5
+
+    exclude:
+      - libqt5designer5
+
+  runtime:
+    env:
+      # Set python home
+      # See https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME
+      PYTHONHOME: '${APPDIR}/usr'
+      # Path to the site-packages dir or other modules dirs
+      # See https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH
+      PYTHONPATH: '${APPDIR}/usr/lib/python3.10/site-packages'
+
+AppImage:
+  sign-key: None
+  arch: x86_64

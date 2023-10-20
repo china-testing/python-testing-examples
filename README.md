@@ -12,13 +12,17 @@ Table of Contents
 	
 python测试开发练习
 
-- shijuan.py  
+- [shijuan.py](https://github.com/china-testing/python-testing-examples/blob/master/shijuan.py)
 
 	某上市公司测试开发面试题随机生成代码。
 	
-- tools\baudrate.py 
+- [baudrate.py](https://github.com/china-testing/python-testing-examples/blob/master/tools/baudrate.py)
 
 串口波特率检测：在保持串行连接的同时改变波特率，并通过查看输出和目测哪种波特率能提供可读输出来轻松识别正确的波特率值。
+
+- [attify-badge-tool](https://github.com/china-testing/python-testing-examples/blob/master/examples/attify-badge-tool)
+
+
 	
 # 测试精品资料下载
 
