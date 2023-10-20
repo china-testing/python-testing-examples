@@ -20,8 +20,11 @@ python测试开发练习
 
 串口波特率检测：在保持串行连接的同时改变波特率，并通过查看输出和目测哪种波特率能提供可读输出来轻松识别正确的波特率值。
 
-- [attify-badge-tool](https://github.com/china-testing/python-testing-examples/blob/master/examples/attify-badge-tool)
+- [attify-badge-tool](https://github.com/china-testing/python-testing-examples/blob/master/examples/attify-badge-tool/serial-console.py)
 
+PyQt5开发的串口连接工具，代码不到400行。
+
+![](examples/attify-badge-tool/images/1.png)
 
 	
 # 测试精品资料下载
