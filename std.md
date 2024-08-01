@@ -9,7 +9,7 @@
  
 ## 软件测试标准的定义
 
-软件测试标准是一套用于定义和指导软件测试过程的指南和原则。这些标准概述了软件测试的策略、程序、方法和最佳实践，以确保软件的质量、功能和性能。它们还为创建和评估软件测试流程、技术和工具奠定了基础。一些常见的软件测试标准包括 ISO/IEC 29119、IEEE 829 和 ISO/IEC 9126。遵守这些标准可以帮助企业提高软件测试流程的有效性和效率，最终为客户提供高质量的软件产品。
+软件测试标准是一套用于定义和指导软件测试过程的指南和原则。这些标准概述了软件测试的策略、程序、方法和最佳实践，以确保软件的质量、功能和性能。它们还为创建和评估软件测试流程、技术和工具奠定了基础。一些常见的软件测试标准包括 ISO/IEC 29119和 ISO/IEC 9126。遵守这些标准可以帮助企业提高软件测试流程的有效性和效率，最终为客户提供高质量的软件产品。
 
 下面简要介绍软件测试标准的一些关键要素：
 
@@ -44,9 +44,8 @@
 
 - GB/T25000 系统与软件工程 系统与软件质量要求和评价（SQuaRE）
 - GB/T38634 系统与软件工程 软件测试
-- ISO/IEC 29119：这一国际标准定义了软件测试过程、测试文档和测试技术。它为测试计划、测试设计、测试执行和测试结束提供了指导。
+- ISO/IEC 29119：这一国际标准定义了软件测试过程、测试文档和测试技术。它为测试计划、测试设计、测试执行和测试结束提供了指导，并取代了IEEE 829
 - ISO 25000：指导软件质量管理和软件测试的系列标准。
-- IEEE 829：该标准规定了软件测试文档的结构和内容，包括测试计划、测试用例和测试报告。
 - ISO/IEC 25010： 该标准侧重于软件产品的质量特性和度量。它定义了评估软件质量属性（如功能性、可靠性、可用性和性能）的标准。为测试人员提供了相互交流的通用语言。
 
 
@@ -220,6 +219,19 @@ Part 14: Data migration testing
 - [本文涉及的python测试开发库](https://github.com/china-testing/python_cn_resouce) 谢谢点赞！ https://github.com/china-testing/python_cn_resouce
 - [python精品书籍下载](https://github.com/china-testing/python_cn_resouce/blob/main/python_good_books.md) https://github.com/china-testing/python_cn_resouce/blob/main/python_good_books.md
 - Linux精品书籍下载 https://www.cnblogs.com/testing-/p/17438558.html
+- https://www.iso.org/search.html
+- https://std.samr.gov.cn/
+- 某高校QA课程 https://www.se.rit.edu/~swen-350/00/index.html
+- https://people.eecs.ku.edu/~hossein/Teaching/Stds/
+- https://testsigma.com/blog/software-testing-standards/
+- http://www.testingstandards.co.uk/Component%20Testing.pdf
+- http://www.testingstandards.co.uk/
+- [BS 7925-1: a Glossary of Software Testing Terms.](http://www.testingstandards.co.uk/Gloss6_3.zip)
+- https://iso25000.com/index.php/en/iso-25000-standards
+- https://committee.iso.org/sites/jtc1sc7/home/projects/flagship-standards/isoiec-29110-series.html
+- https://github.com/china-testing/python-testing-examples/blob/master/std.md
+- https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html
+- http://profs.etsmtl.ca/claporte/English/VSE/index.html
 
 ### IEEE-730-2014 软件质量保证计划.pdf
 
@@ -418,4 +430,4 @@ IEEE 12207:2017 的主要内容
 
 测试标准在确保软件项目的质量和成功方面发挥着至关重要的作用。通过遵循这些标准，企业可以建立一致的测试实践，提高效率，并交付符合客户期望的高质量软件。对于任何希望加强测试流程和生产可靠软件产品的开发团队来说，采用软件测试标准都是必不可少的。
 
-本文持续更新：https://www.cnblogs.com/testing-/p/18334271 及 
+本文持续更新：https://www.cnblogs.com/testing-/p/18334271 及 https://github.com/china-testing/python-testing-examples/blob/master/std.md
